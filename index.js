@@ -1,4 +1,5 @@
 import restify from "restify";
+import corsMiddleware from "restify-cors-middleware2";
 import { CheckURL, checkValidHostname } from "./utils.js";
 
 const server = restify.createServer({
@@ -6,6 +7,9 @@ const server = restify.createServer({
   version: "1.0.0",
 });
 
+const cors = corsMiddleware({ origins: ["*"] });
+
+server.use(cors.actual);
 server.use(restify.plugins.queryParser());
 
 server.get("/", async (_req, res, next) => {
