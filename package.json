@@ -13,5 +13,8 @@
     "node-fetch": "^3.2.10",
     "restify": "^8.6.1"
   },
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": "16.x"
+  }
 }
