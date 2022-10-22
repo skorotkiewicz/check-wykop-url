@@ -21,6 +21,7 @@ Object.assign(popupBody.style, {
   justifyContent: "center",
   flexDirection: "column",
   fontSize: "14px",
+  color: "#000",
 });
 
 function destroyWindow() {
