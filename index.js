@@ -24,11 +24,14 @@ server.get("/check/:url", async (req, res, next) => {
 
     if (valid) {
       const check = await CheckURL(req.query.url);
+      res.status(check.exists ? 200 : 404);
       return res.send(check);
     } else {
+      res.status(406);
       return res.send("Not valid URL");
     }
   } catch (_) {
+    res.status(406);
     res.send("Not valid URL");
   }
 
