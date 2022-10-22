@@ -1,0 +1,14 @@
+{
+  "name": "check-wykop-url",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "is-url-superb": "^6.1.0",
+    "ky": "^0.31.4",
+    "ky-universal": "^0.11.0",
+    "node-fetch": "^3.2.10",
+    "restify": "^8.6.1"
+  },
+  "type": "module"
+}
